@@ -83,24 +83,25 @@
 
                 <!-- Contact Form -->
                 <div style="flex: 1; background: white; padding: 40px; border-radius: 8px; box-shadow: var(--shadow-sm); border: 1px solid #eee;">
-                    <form action="#">
+                    <form id="contact-form">
+                        <div id="contact-status" style="margin-bottom: 20px; font-weight: bold;"></div>
                         <div class="form-group">
                             <label>Your Name</label>
-                            <input type="text" placeholder="John Doe" required>
+                            <input type="text" id="contact-name" placeholder="John Doe" required>
                         </div>
                         <div class="form-group">
                             <label>Your Email</label>
-                            <input type="email" placeholder="john@example.com" required>
+                            <input type="email" id="contact-email" placeholder="john@example.com" required>
                         </div>
                         <div class="form-group">
                             <label>Phone Number</label>
-                            <input type="tel" placeholder="080XXXXXXXX" required>
+                            <input type="tel" id="contact-phone" placeholder="080XXXXXXXX" required>
                         </div>
                         <div class="form-group">
                             <label>Message</label>
-                            <textarea rows="5" placeholder="How can we help you?" required></textarea>
+                            <textarea id="contact-message" rows="5" placeholder="How can we help you?" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        <button type="submit" id="contact-submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
                 </div>
                 
@@ -177,6 +178,10 @@
         </div>
     </footer>
 
+    <!-- Supabase Core -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/forms.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

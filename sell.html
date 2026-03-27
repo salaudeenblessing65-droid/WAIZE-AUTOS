@@ -43,21 +43,21 @@
     <section class="section-light" style="padding-top: 0; margin-bottom: 50px;">
         <div class="container">
             <div class="form-container">
-                <form action="#" method="POST" enctype="multipart/form-data">
-                    
+                <form id="sell-form" autocomplete="off">
+                    <div id="sell-status" style="margin-bottom: 20px; font-weight: bold;"></div>
                     <h3 style="margin-bottom: 20px; color: var(--secondary); font-family: 'Outfit', sans-serif;">Personal Details</h3>
                     <div class="form-grid">
                         <div class="form-group">
                             <label>Full Name</label>
-                            <input type="text" placeholder="John Doe" required>
+                            <input type="text" id="sell-full-name" placeholder="John Doe" required>
                         </div>
                         <div class="form-group">
                             <label>Phone Number</label>
-                            <input type="tel" placeholder="080XXXXXXXX" required>
+                            <input type="tel" id="sell-phone" placeholder="080XXXXXXXX" required>
                         </div>
                         <div class="form-group full">
                             <label>Email Address</label>
-                            <input type="email" placeholder="john@example.com" required>
+                            <input type="email" id="sell-email" placeholder="john@example.com" required>
                         </div>
                     </div>
                     
@@ -65,15 +65,15 @@
                     <div class="form-grid">
                         <div class="form-group">
                             <label>Make / Brand</label>
-                            <input type="text" placeholder="e.g. Toyota, Honda, Lexus" required>
+                            <input type="text" id="sell-make" placeholder="e.g. Toyota, Honda, Lexus" required>
                         </div>
                         <div class="form-group">
                             <label>Model</label>
-                            <input type="text" placeholder="e.g. Camry, Accord, RX350" required>
+                            <input type="text" id="sell-model" placeholder="e.g. Camry, Accord, RX350" required>
                         </div>
                         <div class="form-group">
                             <label>Year</label>
-                            <select required>
+                            <select id="sell-year" required>
                                 <option value="">Select Year</option>
                                 <option value="2024">2024</option>
                                 <option value="2023">2023</option>
@@ -86,23 +86,23 @@
                         </div>
                         <div class="form-group">
                             <label>Mileage (in km)</label>
-                            <input type="number" placeholder="e.g. 45000" required>
+                            <input type="number" id="sell-mileage" placeholder="e.g. 45000" required>
                         </div>
                         <div class="form-group">
                             <label>Price Expectation (₦)</label>
-                            <input type="number" placeholder="e.g. 5000000">
+                            <input type="number" id="sell-price" placeholder="e.g. 5000000">
                         </div>
                         <div class="form-group">
                             <label>Upload Photos</label>
-                            <input type="file" multiple accept="image/*" style="border: 2px dashed #ccc; background: transparent; cursor: pointer;">
+                            <input type="file" id="sell-photos" multiple accept="image/*" style="border: 2px dashed #ccc; background: transparent; cursor: pointer;">
                         </div>
                         <div class="form-group full">
                             <label>Additional Notes / Condition</label>
-                            <textarea rows="4" placeholder="Mention any scratches, modifications, or recent repairs..."></textarea>
+                            <textarea id="sell-note" rows="4" placeholder="Mention any scratches, modifications, or recent repairs..."></textarea>
                         </div>
                         
                         <div class="form-group full">
-                            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 15px;">Submit Request <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
+                            <button type="submit" id="sell-submit" class="btn btn-primary" style="width: 100%; font-size: 1.1rem; padding: 15px;">Submit Request <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
                         </div>
                     </div>
                 </form>
@@ -169,6 +169,10 @@
         </div>
     </footer>
 
+    <!-- Supabase Core -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/forms.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
