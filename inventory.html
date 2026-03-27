@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory | WAIZE AUTOS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">WAIZE<span>AUTOS</span></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="inventory.html" class="active">Inventory</a></li>
+                    <li><a href="sell.html">Sell Your Car</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container">
+            <h1>Vehicle Inventory</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Inventory</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inventory Section -->
+    <section class="section-light">
+        <div class="container">
+
+            <!-- Horizontal Filters Bar -->
+            <div class="inventory-filters-bar">
+                <div class="filter-item">
+                    <label>Brand</label>
+                    <select id="filter-brand">
+                        <option value="all">All Brands</option>
+                        <option value="Toyota">Toyota</option>
+                        <option value="Lexus">Lexus</option>
+                        <option value="Mercedes">Mercedes-Benz</option>
+                        <option value="Honda">Honda</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label>Body Type</label>
+                    <select id="filter-body">
+                        <option value="all">All Types</option>
+                        <option value="SUV">SUV</option>
+                        <option value="Sedan">Sedan</option>
+                        <option value="Truck">Truck</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label>Year</label>
+                    <select id="filter-year">
+                        <option value="all">Any Year</option>
+                        <option value="2022">2022 & Newer</option>
+                        <option value="2020">2020 & Newer</option>
+                        <option value="2018">2018 & Newer</option>
+                        <option value="2015">2015 & Newer</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label>Fuel Type</label>
+                    <select id="filter-fuel">
+                        <option value="all">Any Fuel</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Hybrid">Hybrid</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label>Sort By</label>
+                    <select id="sort-order">
+                        <option value="newest">Newest First</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+
+                <div class="filter-actions">
+                    <button class="btn btn-outline" id="reset-filters">Reset</button>
+                </div>
+            </div>
+
+            <div class="inventory-results-info">
+                Showing <strong id="car-count">7</strong> luxury vehicles
+            </div>
+
+            <!-- Cars Grid -->
+            <div class="cars-grid" id="cars-grid">
+                <!-- Car 1 -->
+                <div class="car-card" data-brand="Lexus" data-body="SUV" data-year="2024" data-fuel="Petrol"
+                    data-price="0" data-date="2026-03-26">
+                    <div class="car-badge">New Arrival</div>
+                    <div class="car-image">
+                        <img src="images/lexus-rx-350-2024.png" alt="2024 Lexus RX 350">
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">2024 Lexus RX 350</h3>
+                        <div class="car-price price-on-request">Price on Request</div>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-calendar-alt"></i><span>2024</span></div>
+                            <div class="spec-item"><i class="fas fa-gas-pump"></i><span>Petrol</span></div>
+                            <div class="spec-item"><i class="fas fa-car"></i><span>SUV</span></div>
+                        </div>
+                        <div class="car-action">
+                            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Dealer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car 2 -->
+                <div class="car-card" data-brand="Toyota" data-body="SUV" data-year="2022" data-fuel="Petrol"
+                    data-price="0" data-date="2026-03-26">
+                    <div class="car-image">
+                        <img src="images/toyota-highlander-2022.png" alt="2022 Toyota Highlander">
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">2022 Toyota Highlander</h3>
+                        <div class="car-price price-on-request">Price on Request</div>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-calendar-alt"></i><span>2022</span></div>
+                            <div class="spec-item"><i class="fas fa-gas-pump"></i><span>Petrol</span></div>
+                            <div class="spec-item"><i class="fas fa-car"></i><span>SUV</span></div>
+                        </div>
+                        <div class="car-action">
+                            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Dealer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car 3 -->
+                <div class="car-card" data-brand="Lexus" data-body="SUV" data-year="2013" data-fuel="Petrol"
+                    data-price="0" data-date="2026-03-26">
+                    <div class="car-badge">Luxury</div>
+                    <div class="car-image">
+                        <img src="images/lexus-rx-350-2013.png" alt="2013 Lexus RX 350">
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">2013 Lexus RX 350</h3>
+                        <div class="car-price price-on-request">Price on Request</div>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-calendar-alt"></i><span>2013</span></div>
+                            <div class="spec-item"><i class="fas fa-gas-pump"></i><span>Petrol</span></div>
+                            <div class="spec-item"><i class="fas fa-car"></i><span>SUV</span></div>
+                        </div>
+                        <div class="car-action">
+                            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Dealer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car 4 -->
+                <div class="car-card" data-brand="Lexus" data-body="SUV" data-year="2013" data-fuel="Petrol"
+                    data-price="0" data-date="2026-03-26">
+                    <div class="car-image">
+                        <img src="images/lexus-rx-350-2013-silver.png" alt="2013 Lexus RX 350 Silver">
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">2013 Lexus RX 350</h3>
+                        <div class="car-price price-on-request">Price on Request</div>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-calendar-alt"></i><span>2013</span></div>
+                            <div class="spec-item"><i class="fas fa-gas-pump"></i><span>Petrol</span></div>
+                            <div class="spec-item"><i class="fas fa-car"></i><span>SUV</span></div>
+                        </div>
+                        <div class="car-action">
+                            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Dealer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car 5 -->
+                <div class="car-card" data-brand="Toyota" data-body="SUV" data-year="2017" data-fuel="Petrol"
+                    data-price="0" data-date="2026-03-26">
+                    <div class="car-image">
+                        <img src="images/toyota-highlander-2017.png" alt="2017 Toyota Highlander">
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">2017 Toyota Highlander</h3>
+                        <div class="car-price price-on-request">Price on Request</div>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-calendar-alt"></i><span>2017</span></div>
+                            <div class="spec-item"><i class="fas fa-gas-pump"></i><span>Petrol</span></div>
+                            <div class="spec-item"><i class="fas fa-car"></i><span>SUV</span></div>
+                        </div>
+                        <div class="car-action">
+                            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Dealer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car 6 -->
+                <div class="car-card" data-brand="Toyota" data-body="Sedan" data-year="2013" data-fuel="Petrol"
+                    data-price="0" data-date="2026-03-26">
+                    <div class="car-image">
+                        <img src="images/toyota-camry-2013.png" alt="2013 Toyota Camry">
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">2013 Toyota Camry</h3>
+                        <div class="car-price price-on-request">Price on Request</div>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-calendar-alt"></i><span>2013</span></div>
+                            <div class="spec-item"><i class="fas fa-gas-pump"></i><span>Petrol</span></div>
+                            <div class="spec-item"><i class="fas fa-car"></i><span>Sedan</span></div>
+                        </div>
+                        <div class="car-action">
+                            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Dealer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car 7 -->
+                <div class="car-card" data-brand="Toyota" data-body="Sedan" data-year="2020" data-fuel="Petrol"
+                    data-price="0" data-date="2026-03-26">
+                    <div class="car-badge">Rugged</div>
+                    <div class="car-image">
+                        <img src="images/toyota-camry.png" alt="Toyota Camry">
+                    </div>
+                    <div class="car-content">
+                        <h3 class="car-title">Toyota Camry</h3>
+                        <div class="car-price price-on-request">Price on Request</div>
+                        <div class="car-specs">
+                            <div class="spec-item"><i class="fas fa-calendar-alt"></i><span>2020</span></div>
+                            <div class="spec-item"><i class="fas fa-gas-pump"></i><span>Petrol</span></div>
+                            <div class="spec-item"><i class="fas fa-car"></i><span>Sedan</span></div>
+                        </div>
+                        <div class="car-action">
+                            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Contact Dealer</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/2348057484914" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <h3>WAIZE<span>AUTOS</span></h3>
+                    <p>WAIZE GLOBAL CONCEPT<br>Auto Sales – Importer – Exporter – General Merchants. Premium vehicles
+                        with a guarantee of quality.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="inventory.html">Inventory</a></li>
+                        <li><a href="sell.html">Sell Your Car</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>9 Balogun Street, Ijebu-Ode, Ogun State</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>08057484914, 07032496076</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:Waizeglobalconcept1@gmail.com"
+                                style="color: inherit;">Waizeglobalconcept1@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-col footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to get the latest deals and car news.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Waize Global Concept. All Rights Reserved. Designed by Antigravity.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/inventory.js"></script>
+</body>
+
+</html>
